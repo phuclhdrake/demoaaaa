@@ -63,13 +63,11 @@ const SignInScreen = (props) => {
 
     return(
         <View style={styles.root}>
-            <Image source={require('../assets/logo.png')} style={styles.logo} />
-            <TextInput placeholder='username' value={username} s />
-
-            <CustomInput placeholder='Username' value={username} setValue={setUsername} secureTextEntry={false} />
-            <CustomInput placeholder='Password' value={password} setValue={setPassword} secureTextEntry={true} />
-            <CustomButton btnLabel={'Sign In'} onPress={doLogin} />
-            <CustomButton btnLabel={'Back to Home'} onPress={navigateToHome} />
+            <Image source={require('../../assets/favicon.png')} style={styles.logo} />
+            <TextInput placeholder='username' value={username} onChangeText={(text) => setUsername(text)} secureTextEntry={false} />
+            <TextInput placeholder='password' value={password} onChangeText={(text) => setPassword(text)} secureTextEntry={true} />
+            <Button title='Sign In' onPress={doLogin} />
+            <Button title='Back to Home' onPress={navigateToHome} />
         </View>
     );
 
