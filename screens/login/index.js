@@ -43,14 +43,14 @@ const SignInScreen = (props) => {
             const authInfo = users.find((user) => user.userName === request.username);
 
             if (!authInfo) {
-                Alert.alert('Notification', 'Cant find user infomation', [{ text: 'Cancel', onPress: () => log.error('Cant find user ' + request.username) }]);
+                Alert.alert('Notification', 'Cant find user infomation', [{ text: 'Cancel', onPress: () => console.log('Cant find user ' + request.username) }]);
             } else {
                 if (!(authInfo.password === request.password)) {
-                    Alert.alert('Notification', 'Password is not correct', [{ text: 'Cancel', onPress: () => log.error('Password is not correct for ' + request.username) }]);
+                    Alert.alert('Notification', 'Password is not correct', [{ text: 'Cancel', onPress: () => console.log('Password is not correct for ' + request.username) }]);
                 } else {
                     Alert.alert('Notification', 'Login successfull ' + request.username, [
                         { text: 'OK', onPress: () => navigateToHome() },
-                        { text: 'Cancel', onPress: () => log.info('Press Cancel') }
+                        { text: 'Cancel', onPress: () => console.log('Press Cancel') }
                     ]);
                 }
             }
@@ -64,10 +64,14 @@ const SignInScreen = (props) => {
     return(
         <View style={styles.root}>
             <Image source={require('../../assets/favicon.png')} style={styles.logo} />
-            <TextInput placeholder='username' value={username} onChangeText={(text) => setUsername(text)} secureTextEntry={false} />
-            <TextInput placeholder='password' value={password} onChangeText={(text) => setPassword(text)} secureTextEntry={true} />
-            <Button title='Sign In' onPress={doLogin} />
-            <Button title='Back to Home' onPress={navigateToHome} />
+            <TextInput style={styles.customInput} placeholder='username' value={username} onChangeText={(text) => setUsername(text)} secureTextEntry={false} />
+            <TextInput style={styles.customInput} placeholder='password' value={password} onChangeText={(text) => setPassword(text)} secureTextEntry={true} />
+            <Pressable style={styles.customButton} onPress={doLogin} >
+                <Text style={styles.textButton}>Sig in</Text>
+            </Pressable>
+            <Pressable style={styles.customButton} onPress={navigateToHome} >
+                <Text style={styles.textButton}>Back to Home</Text>
+            </Pressable>
         </View>
     );
 
@@ -85,5 +89,29 @@ const styles = StyleSheet.create({
         width: '50%',
         height: '50%',
         resizeMode: 'contain'
+    },
+    customInput: {
+        backgroundColor: 'white',
+        width: '100%',
+        borderColor: '#e8e8e8',
+        borderWidth: 1,
+        borderRadius: 5,
+        padding: 10,
+        marginVertical: 10
+    },
+    textButton: {
+        backgroundColor: 'blue',
+        color: 'white',
+        borderRadius: 5,
+        borderWidth: 1,
+        borderColor: 'Black',
+        margin: 10,
+        padding: 10,
+        fontSize: 16,
+        width: '100%',
+        textAlign: 'center',
+    },
+    customButton: {
+        width: 200,
     }
 });
