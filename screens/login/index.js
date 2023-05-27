@@ -26,11 +26,11 @@ const SignInScreen = (props) => {
     const doLogin = () => {
         // kiêm tra
         if (username.length == 0){
-            alert('Hay nhap user name');
+            alert('Hãy nhập tài khoản!');
             return;
         }
         if (password.length == 0){
-            alert('Hay nhap password');
+            alert('Hãy nhập mật khẩu!');
             return;
         }
 
@@ -41,14 +41,14 @@ const SignInScreen = (props) => {
 
         if (users) {
             const authInfo = users.find((user) => user.userName === request.username);
-
+9
             if (!authInfo) {
-                Alert.alert('Notification', 'Cant find user infomation', [{ text: 'Cancel', onPress: () => console.log('Cant find user ' + request.username) }]);
+                Alert.alert('Thông Báo', 'Sai tài khoản', [{ text: 'Cancel', onPress: () => console.log('Cant find user ' + request.username) }]);
             } else {
                 if (!(authInfo.password === request.password)) {
-                    Alert.alert('Notification', 'Password is not correct', [{ text: 'Cancel', onPress: () => console.log('Password is not correct for ' + request.username) }]);
+                    Alert.alert('Thông Báo', 'Sai mật khẩu!', [{ text: 'Cancel', onPress: () => console.log('Password is not correct for ' + request.username) }]);
                 } else {
-                    Alert.alert('Notification', 'Login successfull ' + request.username, [
+                    Alert.alert('Thông Báo', 'Đăng nhập thành công với tài khoản: ' + request.username, [
                         { text: 'OK', onPress: () => navigateToHome() },
                         { text: 'Cancel', onPress: () => console.log('Press Cancel') }
                     ]);
@@ -86,28 +86,29 @@ const styles = StyleSheet.create({
         padding: 20
     },
     logo: {
-        width: '50%',
-        height: '50%',
-        resizeMode: 'contain'
+        width: '100%',
+        height: '40%',
+        backgroundColor: '#EEE9DA',
+        resizeMode: 'contain',
     },
     customInput: {
         backgroundColor: 'white',
         width: '100%',
-        borderColor: '#e8e8e8',
+        borderColor: '#A4D0A4',
         borderWidth: 1,
         borderRadius: 5,
         padding: 10,
         marginVertical: 10
     },
     textButton: {
-        backgroundColor: 'blue',
+        backgroundColor: '#539165',
         color: 'white',
         borderRadius: 5,
         borderWidth: 1,
         borderColor: 'Black',
         margin: 10,
         padding: 10,
-        fontSize: 16,
+        fontSize: 18,
         width: '100%',
         textAlign: 'center',
     },

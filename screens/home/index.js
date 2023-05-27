@@ -24,14 +24,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     textButton: {
-        backgroundColor: 'blue',
+        backgroundColor: '#539165',
         color: 'white',
         borderRadius: 5,
         borderWidth: 1,
         borderColor: 'Black',
         margin: 10,
         padding: 10,
-        fontSize: 16,
+        fontSize: 18,
         width: '100%',
         textAlign: 'center',
     },
