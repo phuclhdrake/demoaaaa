@@ -2,14 +2,74 @@
   "users": [
     {
         "id": 1,
-        "userName": "phuclhph20309",
-        "password": "123456",
+        "userName": "phuc1",
+        "password": "1",
         "firtName": "Lê",
         "lastName": "Phúc",
         "email": "phuclhph20309@fpt.edu.vn",
         "gender": "Male",
+        "role": "ADMIN",
         "createDate": "17/09/2023",
         "updateDate": "17/09/2023"
+    },
+    {
+      "id": 2,
+      "userName": "phuc2",
+      "password": "2",
+      "firtName": "Lê",
+      "lastName": "Phúc",
+      "email": "phuclhph20309@fpt.edu.vn",
+      "gender": "Male",
+      "role": "USER",
+      "createDate": "17/09/2023",
+      "updateDate": "17/09/2023"
+    }
+  ],
+  "students":[
+    {
+        "studentId": 1,
+        "fullName": "Lê Hồng Phúc",
+        "email": "phuclhph20309@fpt.edu.vn",
+        "gender": "Male",
+        "dateOfBirth": "01/10/2003",
+        "createDate": "17/09/2023",
+        "updateDate": "17/09/2023"
+    },
+    {
+      "studentId": 2,
+      "fullName": "Lê Hồng Phúc 2",
+      "email": "phuclhph20309@fpt.edu.vn",
+      "gender": "Female",
+      "dateOfBirth": "01/10/2003",
+      "createDate": "17/09/2023",
+      "updateDate": "17/09/2023"
+    },
+    {
+      "studentId": 3,
+      "fullName": "Lê Hồng Phúc 3",
+      "email": "phuclhph20309@fpt.edu.vn",
+      "gender": "Female",
+      "dateOfBirth": "01/10/2003",
+      "createDate": "17/09/2023",
+      "updateDate": "17/09/2023"
+    },
+    {
+      "studentId": 4,
+      "fullName": "Lê Hồng Phúc 4",
+      "email": "phuclhph20309@fpt.edu.vn",
+      "gender": "Male",
+      "dateOfBirth": "01/10/2003",
+      "createDate": "17/09/2023",
+      "updateDate": "17/09/2023"
+    },
+    {
+      "studentId": 5,
+      "fullName": "Lê Hồng Phúc 5",
+      "email": "phuclhph20309@fpt.edu.vn",
+      "gender": "Male",
+      "dateOfBirth": "01/10/2003",
+      "createDate": "17/09/2023",
+      "updateDate": "17/09/2023"
     }
 ]
 }
